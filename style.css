@@ -1,5 +1,6 @@
 /******* GENERAL *******/
 /* spacing on all sections */
+/* L'ID de section reste la méthode de ciblage principale */
 #about,
 #skills,
 #portfolio,
@@ -7,6 +8,7 @@
     margin-top: 4rem;
     padding-top: 4rem;
 }
+/* Les h2 sont les titres principaux de section, ils ne changent pas */
 #about h2,
 #skills h2,
 #portfolio h2,
@@ -16,8 +18,10 @@
 #contact {
     padding-bottom: 4rem;
 }
+
+/* Navbar */
 .navbar {
-    background-color: #1a1a1a; /* Un fond gris très foncé par défaut */
+    background-color: #1a1a1a; /* Un fond gris très foncé par défaut (Correction Contraste Initial) */
 }
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
@@ -31,10 +35,7 @@
     background: url("images/image1.webp");
     background-size: cover;
     position: relative;
-
 }
-
-/* FIN DE L'AJOUT */
 
 /* text css above hero image*/
 .hero_title {
@@ -52,21 +53,29 @@
     transform: translate(-50%, -50%);
     color: white; /* Conserve le texte en blanc */
     
-    /*  AJOUT POUR FORCER LE CONTRASTE  */
-    padding: 20px 40px; /* Ajoute de l'espace autour du texte */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond noir semi-transparent (70% opaque) */
-    border-radius: 5px; /* Optionnel: adoucit les coins */
-    z-index: 2; /* S'assure que le fond est au-dessus de l'image si vous avez gardé l'overlay */
+    /*  AJOUT POUR FORCER LE CONTRASTE  */
+    padding: 20px 40px; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    border-radius: 5px; 
+    z-index: 2; 
 }
 
 
 /* about */
+/* L'ID #about est maintenant dans <article>, mais le ciblage par ID fonctionne toujours */
 .imageAboutPage {
     width: 100%;
 }
 .imageAboutPage {
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+/*  AJOUT : Style pour le nouveau titre 'Mes Diplômes' (si vous utilisez h4) */
+#about h4 {
+    margin-top: 1rem;
+    font-size: 1.5rem; /* Taille par défaut de Bootstrap pour h4 */
+    font-weight: bold;
 }
 
 /* skills */
@@ -87,8 +96,10 @@
     text-align: center;
     width: 100%;
 }
-.card-title {
+/* CHANGEMENT : Le sélecteur cible h3 au lieu de h4 (mis à jour dans le JS) */
+.card-title { 
     text-align: center;
+
 }
 .card:hover .skillsIcon {
     color: #008000;
@@ -103,6 +114,7 @@
 }
 
 /* contact */
+
 .contactColumn {
     display: flex;
     flex-direction: column;
@@ -110,6 +122,16 @@
 }
 .contactColumn i {
     color: #198754;
+}
+/*  CHANGEMENT : Cibler h3 au lieu de h4 pour les titres Téléphone/Email/LinkedIn */
+.contactColumn h3 {
+    text-align: center;
+    margin-top: 0.5rem;
+}
+/* AJOUT : Retire le style de lien par défaut pour les coordonnées */
+.contactColumn address p a {
+    color: inherit; /* Utilise la couleur du texte normal */
+    text-decoration: none; /* Supprime le soulignement */
 }
 
 /* footer */
