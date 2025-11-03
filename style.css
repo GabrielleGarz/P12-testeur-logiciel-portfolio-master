@@ -23,6 +23,15 @@
 .navbar {
     background-color: #1a1a1a; /* Un fond gris très foncé par défaut (Correction Contraste Initial) */
 }
+/* Correction de contraste pour les liens de navigation sur fond sombre */
+
+/* Cible les liens actifs/focus/hover pour garantir un texte blanc pur (Contraste maximal) 🟢 */
+.navbar-nav .nav-link:focus, 
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #ffffff !important; 
+    opacity: 1 !important; 
+}
 /* display background dark color on navbar scroll */
 .navbarScroll.navbarDark {
     background-color: #5b5b5b;
@@ -79,10 +88,12 @@
 }
 
 /* skills */
-.skillsText.card {
-    height: 350px;
+/* Rendre ce sélecteur plus spécifique à la section #skills */
+#skills .skillsText.card { 
+     height: 350px;
     cursor: pointer;
 }
+
 .skillsText img {
     width: 100%;
     height: 150px;
@@ -110,8 +121,15 @@
 
 /* portfolio */
 #portfolio p {
-    text-align: center;
+text-align: center;
 }
+
+/* RÈGLE DÉFINITIVE : Force le comportement du conteneur du bouton */
+.portfolioContent .card-body .text-center {
+    width: 100% !important; /* Garantir qu'il prend toute la largeur */
+    text-align: center !important; /* S'assurer qu'il centre son contenu en ligne */
+}
+/* FIN DE LA MODIFICATION */
 
 /* contact */
 
@@ -130,7 +148,7 @@
     font-weight: bold;
     margin-top: 0.5rem; /* Récupérer la marge si nécessaire */
     margin-bottom: 0;}
-    
+
 /* AJOUT : Retire le style de lien par défaut pour les coordonnées */
 .contactColumn address p a {
     color: inherit; /* Utilise la couleur du texte normal */

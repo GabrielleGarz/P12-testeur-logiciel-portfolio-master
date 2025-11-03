@@ -77,6 +77,9 @@ function createPortfolioFromJSON() {
         <div class="card-body">
             <img src="./images/${item.image}" alt="${item.title}"/>
             <p class="card-title mt-3"><strong>${item.title}</strong></p> <p class="card-text mt-3">${item.text}</p>
+            <div class="text-center">
+            <a href="${item.link}" class="btn btn-success" target="_blank" rel="noopener noreferrer">Lien</a>
+            </div>
         </div>
     </div>
                 `;
