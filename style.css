@@ -80,10 +80,10 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
-/*  AJOUT : Style pour le nouveau titre 'Mes Diplômes' (si vous utilisez h4) */
+/*  AJOUT : Style pour le nouveau titre 'Mes Diplômes' */
 #about h4 {
     margin-top: 1rem;
-    font-size: 1.5rem; /* Taille par défaut de Bootstrap pour h4 */
+    font-size: 1.5rem; 
     font-weight: bold;
 }
 
@@ -107,7 +107,7 @@
     text-align: center;
     width: 100%;
 }
-/* CHANGEMENT : Le sélecteur cible h3 au lieu de h4 (mis à jour dans le JS) */
+
 .card-title { 
     text-align: center;
 
@@ -124,12 +124,12 @@
 text-align: center;
 }
 
-/* RÈGLE DÉFINITIVE : Force le comportement du conteneur du bouton */
+/* Force le comportement du conteneur du bouton */
 .portfolioContent .card-body .text-center {
     width: 100% !important; /* Garantir qu'il prend toute la largeur */
     text-align: center !important; /* S'assurer qu'il centre son contenu en ligne */
 }
-/* FIN DE LA MODIFICATION */
+
 
 /* contact */
 
@@ -141,12 +141,12 @@ text-align: center;
 .contactColumn i {
     color: #198754;
 }
-/* 🟢 AJOUTEZ CETTE RÈGLE POUR STYLER LE NOUVEAU LIBELLÉ 🟢 */
+  
 .contactColumn p strong {
-    /* Si vous voulez qu'il ressemble à l'ancien H3, ajustez la taille et la marge */
-    font-size: 1.17em; /* Taille par défaut de h2/h3 */
+
+    font-size: 1.17em; 
     font-weight: bold;
-    margin-top: 0.5rem; /* Récupérer la marge si nécessaire */
+    margin-top: 0.5rem; 
     margin-bottom: 0;}
 
 /* AJOUT : Retire le style de lien par défaut pour les coordonnées */
